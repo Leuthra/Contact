@@ -32,8 +32,8 @@ export const saveContact = async (prevSate: any, formData: FormData) => {
     return { message: "Failed to create contact" };
   }
 
-  revalidatePath("/contacts");
-  redirect("/contacts");
+  revalidatePath("/");
+  redirect("/");
 };
 
 export const updateContact = async (
@@ -63,8 +63,8 @@ export const updateContact = async (
     return { message: "Failed to update contact" };
   }
 
-  revalidatePath("/contacts");
-  redirect("/contacts");
+  revalidatePath("/");
+  redirect("/");
 };
 
 export const deleteContact = async (id: string) => {
@@ -76,5 +76,5 @@ export const deleteContact = async (id: string) => {
     return { message: "Failed to delete contact" };
   }
 
-  revalidatePath("/contacts");
+  revalidatePath("/");
 };
